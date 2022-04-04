@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".CurrentWeather">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/forecastTopCard"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/cardBG"
+            app:cardCornerRadius="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:id="@+id/now_icon"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:id="@+id/now_temp_text"
+
+                            android:gravity="bottom"
+                            android:textSize="50sp"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/now_code_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#7A7474"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/city_text"
+                        android:layout_width="340dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="37dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/information_outline" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/forecastDetailCard"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:cardBackgroundColor="@color/cardBG"
+            app:cardCornerRadius="10dp"
+            >
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:rowCount="3"
+                android:columnCount="4"
+                android:orientation="horizontal">
+                <ImageView
+                    android:src="@drawable/water_percent"
+                    android:layout_height="60dp"
+                    android:layout_width="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"/>
+                <ImageView
+                    android:src="@drawable/weather_windy"
+                    android:layout_height="60dp"
+                    android:layout_width="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"/>
+                <ImageView
+                    android:src="@drawable/eye_outline"
+                    android:layout_height="60dp"
+                    android:layout_width="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"/>
+                <ImageView
+                    android:src="@drawable/gauge_low"
+                    android:layout_height="60dp"
+                    android:layout_width="80dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"/>
+                <TextView android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:id="@+id/curr_humid_text"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+                <TextView android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:id="@+id/curr_wind_text"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+                <TextView android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:id="@+id/curr_vis_text"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+                <TextView android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:id="@+id/curr_pressure_text"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+                <TextView android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:text="@string/humid_label"
+                    android:textColor="#7A7474"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    />
+                <TextView android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:text="@string/wind_label"
+                    android:textColor="#7A7474"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    />
+                <TextView android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:text="@string/vis_label"
+                    android:textColor="#7A7474"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    />
+                <TextView android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:text="@string/pressure_label"
+                    android:textColor="#7A7474"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    />
+
+            </GridLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/forecastRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp" />
+
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addfavorite_fab"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@drawable/map_marker_plus"
+        tools:ignore="SpeakableTextPresentCheck" />
+</FrameLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/cardBG"
+    android:layout_marginVertical="8dp"
+    app:cardBackgroundColor="@color/cardBG"
+    app:cardCornerRadius="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/list_date"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="FIRST VAL"
+            android:layout_marginHorizontal="8dp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+        <ImageView
+            android:id="@+id/list_status_icon"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/list_min_temp"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="THIRD VAL"
+            android:layout_marginHorizontal="8dp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/list_max_temp"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="FOURTH VAL"
+            android:layout_marginHorizontal="8dp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

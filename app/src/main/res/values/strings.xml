@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pressure_label">Pressure</string>
+    <string name="humid_label">Humidity</string>
+    <string name="wind_label">Wind Speed</string>
+    <string name="vis_label">Visibility</string>
+    <string name="api_key">AIzaSyCI9G93pww9G79wfa-8lyB0zr1jKhMPzf8</string>
+</resources>
